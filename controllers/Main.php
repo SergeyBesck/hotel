@@ -17,7 +17,13 @@ class Main extends CI_Controller
         } 
         else {
             $this->load->view('temp/navbar.php');
-        } 
+        }
+         //выбрать все услуги ,все номера
+        $this->load->model('model_uslugi');
+        $data['uslugi'] = $this->model_uslugi->select_uslugi();
+         $this->load->model('model_nomers');
+        $data['nomers'] = $this->model_nomers->select_nomers();
+        $this->load->view('view_main.php', $data);
         $this->load->view('temp/footer.php');
     }
     public function registration()
