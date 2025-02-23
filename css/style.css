@@ -1,7 +1,20 @@
 *{margin: 0; box-sizing: border-box;}
+
 header, nav, main, section, footer {display: block}
+
+.navbar, .navbars {
+    background-color: #f1f3ff;
+
+    font-size: 20px;
+}
+footer p{
+    margin-bottom: 0;
+}
 main{padding-left: 5px; padding-right: 5px;padding-bottom: 10px;font-size: 20px;}
 #carouselExampleDark{height: 500px;}
 .carousel-item{height: 500px;}
 .name{text-align: center;margin: 20px 20px;}
 #bron{text-align: justify;font-size: 20px;}
+.ic{
+    height: 260px;
+}
