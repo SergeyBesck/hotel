@@ -62,14 +62,14 @@
                     {
                         echo '<div class="col">
       <div class="card h-100">
-      <div class="card">
-         <img src="img/' . $row['photo'] . '" class="card-img-top" alt="...">
-         </div>
+         <img src="img/' . $row['photo'] . '" class="card-img-top ic" alt="...">
       <div class="card-body">
          <p class="card-title"><b>' . $row['namen'] . '</b></p>
          <p class="card-text">' . $row['description'] . '</p> 
-         <h5 class="card-title"><b>Цена за сутки. : <span style="color:red">' . $row['price'] . '</b></span> руб.</h5>
       </div>
+       <div class="card-footer">
+                        <h5 class="card-title"><b>Цена за сутки. : <span style="color:red">' . $row['price'] . '</b></span> руб.</h5>
+       </div>
     </div>
   </div>';
                     }
@@ -80,7 +80,7 @@
         </div>
         <div class="row">
             <div class="col-lg-5"></div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 mt-3">
                 <button type="submit" class="btn btn-secondary"><a href="#"></a>Подобрать подходящий номер</button>
             </div>
             <div class="col-lg-5"></div>
@@ -97,14 +97,14 @@
                     {
                         echo '<div class="col">
                                 <div class="card h-100">
-                                <div class="card">
-                                   <img src="img/' . $row['img'] . '" class="card-img-top" alt="...">
+                                    <img src="img/' . $row['img'] . '" class="card-img-top ic" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-title"><b>' . $row['name_usluga'] . '</b></p>
+                                        <p class="card-text">' . $row['opisanie'] . '</p> 
                                     </div>
-                                <div class="card-body">
-                                   <p class="card-title"><b>' . $row['name_usluga'] . '</b></p>
-                                    <p class="card-text">' . $row['opisanie'] . '</p> 
-                                </div>
-                                <h5 class="card-footer"><b>Цена за услугу: <span style="color:red">' . $row['price'] . '</b></span> руб.</h5>
+                                     <div class="card-footer">
+                                        <h5><b>Цена за услугу: <span style="color:red">' . $row['price'] . '</b></span> руб.</h5>
+                                    </div>
                                 </div>
                             </div>';
                     }
