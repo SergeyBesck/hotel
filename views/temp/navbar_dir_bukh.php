@@ -12,7 +12,6 @@
           <div class="dropdown">
           <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Отчёты</button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">кассовый отчёт</a></li>
               <li><a class="dropdown-item" href="">сводный отчёт </a></li>
               <li><a class="dropdown-item" href="">сводный отчёт о доходах от доп. услуг </a></li>
             </ul>
