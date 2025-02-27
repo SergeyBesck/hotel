@@ -16,7 +16,7 @@
                     <input type="date" class="form-control" name="date_2">
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-danger">Применить</button>
+                    <button type="submit" class="btn btn-primary">Применить</button>
                 </div>
             </form>
         </div>
