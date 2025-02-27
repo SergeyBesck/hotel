@@ -16,7 +16,7 @@
                     <input type="date" class="form-control" name="date_2">
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-danger">Применить</button>
+                    <button type="submit" class="btn btn-primary">Применить</button>
                 </div>
             </form>
         </div>
@@ -27,8 +27,9 @@
                         <th>№</th>
                         <th>Тип номера</th>
                         <th>Стоимость номера в сутки</th>
+                         <th>Дата заезда</th>
+                        <th>Дата выезда</th>
                         <th>Количество дней занятости</th>
-                        <th>Среднее значение занятости</th>
                         <th>Сумма</th>
                     </tr>
                 </thead>
@@ -42,12 +43,13 @@
                                        <td>" . $row['id_bron'] . "</td>
                                        <td>" . $row['namen'] . "</td>
                                         <td>" . $row['price'] . "</td>
-                                       <td>" . $row['count(id_bron)'] . "</td>
+                                        <td>" . $row['date_start'] . "</td>
+                                        <td>" . $row['date_end'] . "</td>
                                        <td>" . $row['count(id_bron)'] . "</td>
                                         <td>" . $row['sum(price)'] . "</td>
                                     </tr>";
                         }
-                        echo "<tr><td colspan='5'><b>Итого:</b></td><td>" . $total . "</td></tr>";
+                        echo "<tr><td colspan='6'><b>Итого:</b></td><td>" . $total . "</td></tr>";
                     }
                     ?>
                 </tbody>
