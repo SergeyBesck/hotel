@@ -27,31 +27,30 @@
                         <th>№</th>
                         <th>Тип номера</th>
                         <th>Стоимость номера в сутки</th>
-                         <th>Дата заезда</th>
+                        <th>Дата заезда</th>
                         <th>Дата выезда</th>
                         <th>Количество дней занятости</th>
                         <th>Сумма</th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider">
-                    <?php  
-                    if (!empty($bron)) {
-                        foreach ($bron  as $row) {
-                            $total += $row['count(id_bron)'];
-                            $total += $row['sum(price)'];
-                            echo "<tr>
+                <?php
+                if (!empty($bron)) {
+                    foreach ($bron  as $row) {
+                        $total += $row['sum(price)'];
+                        $total += $row['date_difference'];
+                        echo "<tr>
                                        <td>" . $row['id_bron'] . "</td>
                                        <td>" . $row['namen'] . "</td>
                                         <td>" . $row['price'] . "</td>
                                         <td>" . $row['date_start'] . "</td>
                                         <td>" . $row['date_end'] . "</td>
-                                       <td>" . $row['count(id_bron)'] . "</td>
+                                       <td>" . $row['date_difference'] . "</td>
                                         <td>" . $row['sum(price)'] . "</td>
                                     </tr>";
-                        }
-                        echo "<tr><td colspan='6'><b>Итого:</b></td><td>" . $total . "</td></tr>";
                     }
-                    ?>
+                    echo "<tr><td colspan='6'><b>Итого:</b></td><td>" . $total . "</td></tr>";
+                }
+                ?>
                 </tbody>
             </table>
         </div>
