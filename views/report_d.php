@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h3 style="text-align: center">Отчёт о доходах за период с <?= $d1 ?> по <?= $d2 ?></h3><br>
+            <h3 style="text-align: center">Сводный отчёт о доходах за период с <?= $d1 ?> по <?= $d2 ?></h3><br>
         </div>
     </div>
     <div class="row">
@@ -30,14 +30,15 @@
                         <th>Дата заезда</th>
                         <th>Дата выезда</th>
                         <th>Количество дней занятости</th>
-                        <th>Сумма</th>
+                        <th>Итоговая сумма</th>
                     </tr>
                 </thead>
                 <?php
                 if (!empty($bron)) {
                     foreach ($bron  as $row) {
-                        $total += $row['sum(price)'];
                         $total += $row['date_difference'];
+                        $summ = $row['price'] * $row['date_difference'];
+                        $summ1 += $row['price'] * $row['date_difference'];
                         echo "<tr>
                                        <td>" . $row['id_bron'] . "</td>
                                        <td>" . $row['namen'] . "</td>
@@ -45,10 +46,10 @@
                                         <td>" . $row['date_start'] . "</td>
                                         <td>" . $row['date_end'] . "</td>
                                        <td>" . $row['date_difference'] . "</td>
-                                        <td>" . $row['sum(price)'] . "</td>
+                                      <td>" . $summ . "</td> 
                                     </tr>";
                     }
-                    echo "<tr><td colspan='6'><b>Итого:</b></td><td>" . $total . "</td></tr>";
+                    echo "<tr><td colspan='6'><b>Итого:</b></td><td>" . $summ1 . "</td></tr>";
                 }
                 ?>
                 </tbody>
@@ -57,3 +58,4 @@
         <div class="col-lg-1"></div>
     </div>
 </div>
+        
