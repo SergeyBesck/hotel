@@ -7,7 +7,7 @@ class Buhgalter extends CI_Controller
         $this->load->view('temp/header.php');
         $this->load->view('temp/navbar_dir_bukh');
         $this->load->model('model_bron');
-        $d1 = '2024-01-01';
+        $d1 = '2025-01-01';
         $d2 = date('Y-m-d');
         if (!empty($_POST)) {
             $d1 = $_POST['date_1'];
@@ -25,7 +25,7 @@ class Buhgalter extends CI_Controller
         $this->load->view('temp/header.php');
         $this->load->view('temp/navbar_dir_bukh');
         $this->load->model('model_bron');
-        $d1 = '2024-01-01';
+        $d1 = '2025-01-01';
         $d2 = date('Y-m-d');
         if (!empty($_POST)) {
             $d1 = $_POST['date_1'];
@@ -37,6 +37,7 @@ class Buhgalter extends CI_Controller
         $data['d1'] = $d1;
         $data['d2'] = $d2;
         $data['total'] = 0;
+        $data['summ1'] = 0;
         $this->load->view('report_d.php', $data);
     }
     //формирование отчёта о доходах от дополнительных услуг за период
@@ -45,7 +46,7 @@ class Buhgalter extends CI_Controller
         $this->load->view('temp/header.php');
         $this->load->view('temp/navbar_dir_bukh');
         $this->load->model('model_uslugi');
-        $d1 = '2024-01-01';
+        $d1 = '2025-01-01';
         $d2 = date('Y-m-d');
         if (!empty($_POST)) {
             $d1 = $_POST['date_1'];
