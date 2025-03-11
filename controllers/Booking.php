@@ -22,7 +22,7 @@ class Booking extends CI_Controller
             $person = $_POST['person'];
             $id_type = $_POST['id_type'];
             $this->load->model('model_nomers');
-            $data['nomersbooking'] = $this->model_nomers->select_nomers_booking($person, $id_type);
+            $data['nomersbooking'] = $this->model_nomers->select_nomers_booking($person, $id_type, $date_start, $date_end);
             $this->load->view('view_nomers.php', $data);
         }
     }
